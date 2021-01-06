@@ -113,7 +113,7 @@ var List = map[string]string{"login": `{{define "login"}}
                     data: {
                         'username': $("#username").val(),
                         'password': $("#password").val(),
-                        'token': res.ticket
+                        'token': res.ticket+","+res.randstr
                     },
                     success: function (data) {
                         location.href = data.data.url
