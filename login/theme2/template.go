@@ -79,7 +79,7 @@ var List = map[string]string{"login": `{{define "login"}}
     <script src="{{link .CdnUrl .UrlPrefix "/assets/login/dist/all.min.js"}}"></script>
 
     {% if .TencentWaterProofWallData.AppID  %}
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="https://turing.captcha.qcloud.com/TCaptcha.js"></script>
     {% end %}
 
     <script>

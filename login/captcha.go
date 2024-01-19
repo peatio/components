@@ -2,12 +2,13 @@ package login
 
 import (
 	"encoding/json"
-	"github.com/GoAdminGroup/go-admin/modules/logger"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/GoAdminGroup/go-admin/modules/logger"
 )
 
 const (
@@ -68,7 +69,7 @@ type TencentCaptchaRes struct {
 
 func (c *TencentCaptcha) Validate(token string) bool {
 
-	u := "https://ssl.captcha.qq.com/ticket/verify?"
+	u := "https://turing.captcha.qcloud.com/ticket/verify?"
 
 	tokenArr := strings.Split(token, ",")
 	if len(tokenArr) < 2 {
